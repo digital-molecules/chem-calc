@@ -1,8 +1,8 @@
 from chem_utils import compute_properties, detect_functional_groups, compute_similarity
 
 #example for verification
-smiles1 = "CCO"  # Ethanol
-smiles2 = "CCCO"  # Propanol
+smiles1 = "CCO"  #ethanol
+smiles2 = "CCCO"  #propanol
 
 #basic properties
 props = compute_properties(smiles1)
