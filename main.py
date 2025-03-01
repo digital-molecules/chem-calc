@@ -1,7 +1,7 @@
 import streamlit as st
 from chem_utils import compute_properties, detect_functional_groups, compute_similarity
 
-st.title("Chemical Property Calculator")
+st.title("Chemical Properties Calculator")
 
 smiles1 = st.text_input("Enter a valid SMILES notation:")
 if smiles1:
