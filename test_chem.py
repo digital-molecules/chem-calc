@@ -1,17 +1,14 @@
 from chem_utils import compute_properties, detect_functional_groups, compute_similarity
 
-#example for verification
-smiles1 = "CCO"  #ethanol
-smiles2 = "CCCO"  #propanol
+#the examples used are testing both the case sensitivity and double-character elements
+smiles1 = "Cl"  #chlorobenzene
+smiles2 = "Clc1ccccc1"  #benzene
 
-#basic properties
 props = compute_properties(smiles1)
-print("Ethanol Properties:", props)
+print("Chlorobenzene Properties:", props)
 
-#funct groups
 funct = detect_functional_groups(smiles1)
-print("Ethanol Properties:", funct)
+print("Chlorobenzene's Functional Groups:", funct)
 
-#similarity
 sim = compute_similarity(smiles1, smiles2)
-print("Ethanol vs Propanol Similarity:", sim)
+print("Similarity between Chlorobenzene and Benzene:", sim)
