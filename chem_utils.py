@@ -14,6 +14,7 @@ def compute_properties(smiles: str):
 
     properties = {
         "Molecular Weight": Descriptors.MolWt(mol),
+        "LogP": Descriptors.MolLogP(mol),
         "Number of Rotatable Bonds": Descriptors.NumRotatableBonds(mol),
         "Synthetic Accessibility": QED.qed(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
