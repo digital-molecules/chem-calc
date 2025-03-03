@@ -1,6 +1,6 @@
 
 -----------------------------------------------------------------------------------
-This app was written using PyCharm.
+This app was written in PyCharm.
 
 Make sure you install the 'rdkit' and 'streamlit' libraries using the 'pip install' command.
 -----------------------------------------------------------------------------------
