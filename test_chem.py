@@ -1,4 +1,4 @@
-from chem_utils import compute_properties, detect_functional_groups, compute_similarity
+from chem_calc import compute_properties, detect_functional_groups, compute_similarity
 
 #the examples used are testing both the case sensitivity and double-character elements
 smiles1 = "Cl"  #chlorobenzene
