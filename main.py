@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_utils import compute_properties, detect_functional_groups, compute_similarity
+from chem_calc import compute_properties, detect_functional_groups, compute_similarity
 
 st.title("Chemical Properties Calculator")
 st.write("Made by Thally")
