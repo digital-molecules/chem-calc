@@ -1,4 +1,4 @@
-(Current goals include: amine groups, UI improvement, visual description support and explanatios of each calculation (preferably with a floating icon))
+(Current goals include: amine groups, UI improvement, visual description support and explanations of each calculation (preferably with a floating icon))
 
 1.0.1 Version:
 Added logP calculations
