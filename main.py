@@ -10,9 +10,9 @@ if smiles1:
     props = compute_properties(smiles1)
     st.write("Computed Properties:", props)
 
-if smiles1:
-    funct = detect_functional_groups(smiles1)
-    st.write("Functional Group(s):", funct)
+#if smiles1:
+    #funct = detect_functional_groups(smiles1)
+    #st.write("Functional Group(s):", funct)
 
 smiles2 = st.text_input("Enter another SMILES for similarity comparison:")
 if smiles1 and smiles2:
