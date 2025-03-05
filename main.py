@@ -1,8 +1,7 @@
 import streamlit as st
 from chem_calc import compute_properties, detect_functional_groups, compute_similarity
 
-st.title("Chemical Properties Calculator")
-st.subheader("Made by Thally")
+st.title("Thally's QSAR Toolkit")
 st.write("Credit to the brilliant Suliman Sharif for his public resources. You can read one of his articles [here](https://sharifsuliman.medium.com/understanding-drug-likeness-filters-with-rdkit-and-exploring-the-withdrawn-database-ebd6b8b2921e).")
 
 smiles1 = st.text_input("Enter a valid SMILES notation:")
