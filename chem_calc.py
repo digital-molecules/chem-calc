@@ -16,7 +16,7 @@ def compute_properties(smiles: str):
         "Molecular Weight": Descriptors.MolWt(mol),
         "LogP": Descriptors.MolLogP(mol),
         "Number of Rotatable Bonds": Descriptors.NumRotatableBonds(mol),
-        "Ring Count": rdMolDescriptors.CalcNumRings(mol)
+        "Ring Count": rdMolDescriptors.CalcNumRings(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
         "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
         "Synthetic Accessibility": QED.qed(mol),
