@@ -10,14 +10,10 @@ if smiles1:
     st.write("Computed Properties:", props)
     
 if smiles1:
-    qed_info = compute_qed(smiles1)
-    if "Error" in qed_info:
-        st.error(qed_info["Error"])
+    if qed_info:
+        st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
     else:
-        if qed_info:
-            st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
-        else:
-            st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
+        st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
 
 smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
 if smiles1 and smiles2:
