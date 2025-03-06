@@ -22,6 +22,30 @@ def compute_properties(smiles: str):
     }
     return properties
 
+def qed(smiles: str):
+    mol = smiles_to_mol(smiles)
+    if mol is None:
+        return ("Invalid compound 😿")
+
+    molecular_weight = Descriptors.MolWt(mol)
+    ring_count = rdMolDescriptors.CalcNumRings(mol)
+    rotatable_bonds = Descriptors.NumRotatableBonds(mol)
+    h_bond_donors = rdMolDescriptors.CalcNumHBD(mol)
+    h_bond_acceptors = rdMolDescriptors.CalcNumHBA(mol)
+    log_p = Descriptors.MolLogP(mol)
+
+    successful_parameters = (
+        molecular_weight < 400 and
+        ring_count > 0 and
+        rotatable_bonds < 5 and
+        h_bond_donors <= 5 and
+        h_bond_acceptors <= 10 and
+        log_p < 5
+    )
+
+    return {"Passes QED Drug-Likeness": successful_parameters}
+
+
 def compute_similarity(smiles1: str, smiles2: str):
     mol1 = smiles_to_mol(smiles1)
     mol2 = smiles_to_mol(smiles2)
