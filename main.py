@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_lip, molecular_formula, compute_similarity
+from chem_calc import compute_properties, compute_qed, compute_lip, molecular_formula, compute_similarity
 
 
 with st.sidebar:
@@ -48,6 +48,8 @@ if smiles1:
         st.subheader("Molecular Properties")
         props = compute_properties(smiles1)
         st.write(props)
+        qed = compute_qed(smiles1)
+        st.markdown("QED Drug-Likeness": qed)
 
     with col2:
         st.subheader("Molecular Formula")
