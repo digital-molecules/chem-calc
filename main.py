@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_qed, compute_similarity
+from chem_calc import compute_properties, render_molecule, compute_qed, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
 st.write("*Thanks to the brilliant Suliman Sharif for his public resources.*")
@@ -8,6 +8,11 @@ smiles1 = st.text_input("**Enter a valid SMILES notation please:**")
 if smiles1:
     props = compute_properties(smiles1)
     st.write("Computed Properties:", props)
+
+if smiles1:
+    mol_img = render_molecule(smiles1)
+        if mol_img:
+            st.image(mol_img, caption="Molecular Structure", use_container_width=True)
     
 if smiles1:
     qed_info = compute_qed(smiles1)
