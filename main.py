@@ -62,8 +62,8 @@ if smiles1:
 if smiles1:
     qed = compute_qed(smiles1)
     st.markdown(
-    f"<h3 style='font-size: 20px; color: #7b1462;'>QED Drug-Likeness:</h3> <p style='font-size: 15px; font-weight: bold; color: #0cc8c8;'>{qed}</p>",
-    unsafe_allow_html=True
+        f"<p style='font-size: 20px; font-weight: bold; color: #a20f66;'>QED Drug-Likeness: {qed}</p>",
+        unsafe_allow_html=True
     )
             
 
