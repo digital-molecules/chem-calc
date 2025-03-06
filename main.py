@@ -10,7 +10,7 @@ if smiles1:
     st.write("Computed Properties:", props)
     
 if smiles1:
-    qed_info = qed_drug_likeness(smiles1)
+    qed_info = compute_qed(smiles1)
     if "Error" in qed_info:
         st.error(qed_info["Error"])
     else:
