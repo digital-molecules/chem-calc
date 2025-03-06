@@ -24,7 +24,7 @@ if smiles1:
             st.write("Tanimoto Similarity:", sim)
 
 if smiles:1
-lip_info = compute_lip(smiles1)
+    lip_info = compute_lip(smiles1)
     if lip_info:
         st.success("This molecule follows Lipinski's Rule of 5! 😺")
     else:
