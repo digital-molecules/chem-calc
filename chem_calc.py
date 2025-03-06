@@ -1,5 +1,5 @@
 from rdkit import Chem
-from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED, Draw
+from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED
 #from rdkit.Chem.Fragments import fr_Al_OH, fr_ketone, fr_amide, fr_aldehyde, fr_COO, fr_ester, fr_ether, fr_nitrile, fr_halogen, fr_phenol
 
 def smiles_to_mol(smiles1: str):
@@ -18,11 +18,11 @@ def compute_properties(smiles1: str):
         "Ring Count": rdMolDescriptors.CalcNumRings(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
         "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-        "QED Drug-Likeness": QED.qed(mol),
+        "Synthetic Accessibility": QED.qed(mol),
     }
     return properties
 
-def compute_lipinski(smiles1: str):
+def compute_qed(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
@@ -43,7 +43,7 @@ def compute_lipinski(smiles1: str):
         log_p < 5
     )
 
-    return {"This compound passes Lipinski's Rule of 5": successful_parameters}
+    return {"This compound's QED score is close to 1, it passes the drug-likeness test": successful_parameters}
 
 
 def compute_similarity(smiles1: str, smiles2: str):
@@ -53,9 +53,9 @@ def compute_similarity(smiles1: str, smiles2: str):
     if mol1 is None or mol2 is None:
         return ("Invalid compound 😿")
 
-    fp1 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol1, radius=2, nBits=2048) #Morgan Fingerprints
-    fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
-    
+    fp1 = Chem.RDKFingerprint(mol1) #smiles fingerprints
+    fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
+
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
 
