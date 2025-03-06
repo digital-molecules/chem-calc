@@ -19,10 +19,12 @@ if smiles1:
         else:
             st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
 
-smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
-if smiles1 and smiles2:
-    sim = compute_similarity(smiles1, smiles2)
-    st.write("Tanimoto Similarity:", sim)
+    with col2:
+        st.subheader("Molecular Comparison")
+        smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
+        if smiles1 and smiles2:
+            sim = compute_similarity(smiles1, smiles2)
+            st.write("Tanimoto Similarity:", sim)
 
 
 
