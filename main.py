@@ -20,6 +20,9 @@ if smiles1:
             st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
 
     with col2:
+        st.subheader("Molecular Formula")
+        formula = molecular_formula(smiles)
+        st.write(f"Molecular Formula: {formula}")
         st.subheader("Molecular Comparison")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
         if smiles1 and smiles2:
