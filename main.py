@@ -12,12 +12,12 @@ if smiles1:
 if smiles1:
     qed_info = qed_drug_likeness(smiles1)
     if "Error" in qed_info:
-            st.error(qed_info["Error"])
-        else:
+        st.error(qed_info["Error"])
+    else:
         if qed_info["Passes QED Drug-Likeness"]:
-                st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
-            else:
-                st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
+            st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
+        else:
+            st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
 
 smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
 if smiles1 and smiles2:
