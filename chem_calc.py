@@ -53,8 +53,8 @@ def compute_similarity(smiles1: str, smiles2: str):
     if mol1 is None or mol2 is None:
         return ("Invalid compound 😿")
 
-    fp1 = Chem.RDKFingerprint(mol1) #smiles fingerprints
-    fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
+    fp1 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol1, radius=2, nBits=2048) #morgan fingerprints
+    fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
 
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
