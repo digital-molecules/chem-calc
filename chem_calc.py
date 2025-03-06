@@ -29,7 +29,7 @@ def compute_similarity(smiles1: str, smiles2: str):
     if mol1 is None or mol2 is None:
         return ("Invalid compound 😿")
 
-    fp1 = Chem.RDKFingerprint(mol1)
+    fp1 = Chem.RDKFingerprint(mol1) #smiles fingerprints
     fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
 
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
@@ -48,7 +48,7 @@ def compute_similarity(smiles1: str, smiles2: str):
 def detect_functional_groups(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
-        return ("Make sure you enter a valid SMILES notation")
+        return ("Invalid compound 😿")
 
     functional_groups = {
         "Alcohol": fr_Al_OH(mol),
