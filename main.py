@@ -1,8 +1,8 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_qed, compute_similarity
+from chem_calc import compute_properties, compute_lip, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
-st.write("*Thanks to the brilliant Suliman Sharif for his public resources.*")
+st.write("Thanks to the brilliant Suliman Sharif for his public resources.")
 
 smiles1 = st.text_input("**Enter a valid SMILES notation please:**")
 if smiles1:
@@ -10,11 +10,11 @@ if smiles1:
     st.write("Computed Properties:", props)
     
 if smiles1:
-    qed_info = compute_qed(smiles1)
+    lip_info = compute_lip(smiles1)
     if qed_info:
-        st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
+        st.success("This molecule follows Lipinski's Rule of 5! 😺")
     else:
-        st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
+        st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
 
 smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
 if smiles1 and smiles2:
