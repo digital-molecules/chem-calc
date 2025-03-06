@@ -43,7 +43,7 @@ def qed(smiles: str):
         log_p < 5
     )
 
-    return {"Passes QED Drug-Likeness": successful_parameters}
+    return {"This compound's QED score is close to 1, it passes the drug-likeness test": successful_parameters}
 
 
 def compute_similarity(smiles1: str, smiles2: str):
