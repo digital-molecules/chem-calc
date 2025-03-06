@@ -59,12 +59,6 @@ def compute_similarity(smiles1: str, smiles2: str):
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
 
-def render_image(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol:
-        img = Draw.MolToImage(mol, size=(300, 300))
-        return img
-    return None
 
 
 
