@@ -11,7 +11,7 @@ if smiles1:
     
 if smiles1:
     lip_info = compute_lip(smiles1)
-    if qed_info:
+    if lip_info:
         st.success("This molecule follows Lipinski's Rule of 5! 😺")
     else:
         st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
