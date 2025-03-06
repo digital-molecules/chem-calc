@@ -37,7 +37,7 @@ with st.sidebar:
     st.subheader("🤔 How accurate is it?")
     st.write("💡 This is text")
 
-st.title("Thally's QSAR Toolkit")
+st.title("Metrichemical: A chemist's pocket toolbox")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
 smiles1 = st.text_input("**Please enter valid SMILES:**")
