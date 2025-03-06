@@ -3,7 +3,7 @@ from chem_calc import compute_properties, compute_lip, molecular_formula, comput
 
 
 with st.sidebar:
-    st.header("QSAR")
+    st.header("**QSAR**")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
     st.write("💡 This is text")
     st.subheader("🤔 What are QSAR parameters?")
