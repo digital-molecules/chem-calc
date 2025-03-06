@@ -3,10 +3,39 @@ from chem_calc import compute_properties, compute_lip, molecular_formula, comput
 
 
 with st.sidebar:
-    st.header("This is header")
-    st.subheader("This is subheader")
+    st.header("QSAR")
+    st.subheader("What is QSAR and why is it relevant to cheminformatics?")
+    st.write("This is text")
+    st.subheader("What are QSAR parameters?")
+    st.write("This is text")
+    st.subheader("Why is QSAR useful?")
+    st.write("This is text")
+    st.subheader("What is the SAR paradox?")
     st.write("This is text")
 
+    st.header("LogP")
+    st.subheader("What is LogP and why is it important?")
+    st.write("This is text")
+    st.subheader("How do we interpet LogP values?")
+    st.write("This is text")
+
+    st.header("QED")
+    st.subheader("What is QED and why is it important?")
+    st.write("This is text")
+    st.subheader("How do we interpet QED values?")
+    st.write("This is text")
+    
+    st.header("Tanimoto Index")
+    st.subheader("What is Tanimoto Index and why is it useful?")
+    st.write("This is text")
+    st.subheader("How do we interpet the results of the comparison?")
+    st.write("This is text")
+    
+    st.header("Lipinski's Rule of 5")
+    st.subheader("What is 'Lipinski's Rule of 5'?")
+    st.write("This is text")
+    st.subheader("How accurate is it?")
+    st.write("This is text")
 
 st.title("Thally's QSAR Toolkit")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
