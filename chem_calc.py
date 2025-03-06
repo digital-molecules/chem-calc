@@ -18,7 +18,7 @@ def compute_properties(smiles1: str):
         "Ring Count": rdMolDescriptors.CalcNumRings(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
         "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-        "QED Drug-Likeness: QED.qed(mol)",
+        "QED Drug-Likeness": QED.qed(mol),
     }
     return properties
 
