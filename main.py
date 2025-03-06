@@ -2,7 +2,7 @@ import streamlit as st
 from chem_calc import compute_properties, compute_lip, molecular_formula, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
-st.write("Thanks to the brilliant Suliman Sharif for his public resources.")
+st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
 smiles1 = st.text_input("**Enter a valid SMILES notation please:**")
 
