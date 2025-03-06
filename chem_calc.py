@@ -1,5 +1,5 @@
 from rdkit import Chem
-from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED, Draw
+from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED
 #from rdkit.Chem.Fragments import fr_Al_OH, fr_ketone, fr_amide, fr_aldehyde, fr_COO, fr_ester, fr_ether, fr_nitrile, fr_halogen, fr_phenol
 
 def smiles_to_mol(smiles1: str):
@@ -59,19 +59,24 @@ def compute_similarity(smiles1: str, smiles2: str):
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
 
+
+
+
+
+
+
+
+
+
+
+
+#doesnt work :(
 def render_molecule_image(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
         return None
     img = Draw.MolToImage(mol)  # Generate the image without needing GUI
     return img
-
-
-
-
-
-
-
 
 #removed function from the streamlit app, kept for reference purposes
 def detect_functional_groups(smiles: str):
