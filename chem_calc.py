@@ -45,6 +45,13 @@ def compute_lip(smiles1: str):
 
     return {"This compound passes Lipinski's Rule of 5": successful_parameters}
 
+def molecular_formula(smiles1):
+    mol = Chem.MolFromSmiles(smiles1)
+    if mol is None:
+        return "Invalid compound 😿"
+    return Chem.rdMolDescriptors.CalcMolFormula(mol)
+
+
 
 def compute_similarity(smiles1: str, smiles2: str):
     mol1 = smiles_to_mol(smiles1)
