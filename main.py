@@ -11,8 +11,8 @@ if smiles1:
 
 if smiles1:
     mol_img = render_molecule(smiles1)
-        if mol_img:
-            st.image(mol_img, caption="Molecular Structure", use_container_width=True)
+    if mol_img:
+        st.image(mol_img, caption="Molecular Structure", use_container_width=True)
     
 if smiles1:
     qed_info = compute_qed(smiles1)
