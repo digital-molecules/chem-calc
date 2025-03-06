@@ -3,7 +3,7 @@ from chem_calc import compute_properties, compute_lip, molecular_formula, comput
 
 
 with st.sidebar:
-    st.header("**QSAR**")
+    st.header("QSAR")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
     st.write("💡 This is text")
     st.subheader("🤔 What are the parameters of QSAR?")
@@ -40,7 +40,7 @@ with st.sidebar:
 st.title("Metrichemical: A chemist's pocket toolbox")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
-smiles1 = st.text_input("**Please enter valid SMILES:**")
+smiles1 = st.text_input("**Please enter a valid SMILES:**")
 
 if smiles1:
     col1, col2 = st.columns(2)
