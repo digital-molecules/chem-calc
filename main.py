@@ -48,6 +48,11 @@ if smiles1:
         st.subheader("Molecular Properties")
         props = compute_properties(smiles1)
         st.write(props)
+        qed = compute_qed(smiles1)
+        st.markdown(
+             f"<p style='font-size: 18px; font-weight: bold; color: ##c12e61;'>QED Drug-Likeness: {qed}</p>",
+            unsafe_allow_html=True
+        )
 
     with col2:
         st.subheader("Molecular Formula")
@@ -58,13 +63,6 @@ if smiles1:
         if smiles1 and smiles2:
             sim = compute_similarity(smiles1, smiles2)
             st.write(sim)
-            
-if smiles1:
-    qed = compute_qed(smiles1)
-    st.markdown(
-        f"<p style='font-size: 18px; font-weight: bold; color: ##c12e61;'>QED Drug-Likeness: {qed}</p>",
-        unsafe_allow_html=True
-    )
             
 
 if smiles1:
