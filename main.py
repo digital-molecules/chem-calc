@@ -47,17 +47,17 @@ if smiles1:
     with col1:
         st.subheader("Molecular Properties")
         props = compute_properties(smiles1)
-        st.write("Computed Properties:", props)
+        st.write(props)
 
     with col2:
         st.subheader("Molecular Formula")
         formula = molecular_formula(smiles1)
         st.write(f"Molecular Formula: {formula}")
-        st.subheader("Molecular Comparison")
+        st.subheader("Tanimoto Similarity")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
         if smiles1 and smiles2:
             sim = compute_similarity(smiles1, smiles2)
-            st.write("Tanimoto Similarity:", sim)
+            st.write(sim)
 
 if smiles1:
     lip_info = compute_lip(smiles1)
