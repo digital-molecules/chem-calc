@@ -1,9 +1,0 @@
-(Current goals include: amine groups, UI improvement, visual description support and explanations of each calculation (preferably with a floating icon))
-
-1.0.1 Version:
-Added logP calculations
-
-1.0.0 Version:
-The app can calculate MW, Rotatable Bonds, Synthetic Accessibility and H-Bond Donors and Acceptors
-The app can showcase some of the main potential functional groups of the molecule, including alcohols, ketones, amides, aldehydes, carb acids, esters, ethers, nitriles, halogens and phenols
-The app has the option to add a second molecule to calculate the similarity between the original molecule
