@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, detect_functional_groups, compute_similarity
+from chem_calc import compute_properties, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
 st.write("Thanks to the brilliant Suliman Sharif for his public resources and my younger brother Chris who was (mostly) available to help with the debugging.")
