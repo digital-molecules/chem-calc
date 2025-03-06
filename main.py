@@ -49,7 +49,10 @@ if smiles1:
         props = compute_properties(smiles1)
         st.write(props)
         qed = compute_qed(smiles1)
-        st.markdown(f"QED Drug-Likeness: {qed}")
+        st.markdown(
+        f"<h3 style='color: #4B9CD3;'>QED Drug-Likeness:</h3> <p style='font-size: 20px; font-weight: bold; color: #2E8B57;'>{qed}</p>", 
+        unsafe_allow_html=True
+        )
 
     with col2:
         st.subheader("Molecular Formula")
