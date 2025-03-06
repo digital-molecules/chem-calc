@@ -18,11 +18,11 @@ def compute_properties(smiles1: str):
         "Ring Count": rdMolDescriptors.CalcNumRings(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
         "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-        "Synthetic Accessibility": QED.qed(mol),
+        "QED Drug-Likeness": QED.qed(mol),
     }
     return properties
 
-def compute_qed(smiles1: str):
+def compute_lip(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
@@ -43,7 +43,7 @@ def compute_qed(smiles1: str):
         log_p < 5
     )
 
-    return {"This compound's QED score is close to 1, it passes the drug-likeness test": successful_parameters}
+    return {"This compound passes Lipinski's Rule of 5": successful_parameters}
 
 
 def compute_similarity(smiles1: str, smiles2: str):
