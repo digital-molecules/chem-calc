@@ -23,11 +23,10 @@ def compute_properties(smiles1: str):
     return properties
 
 def compute_qed(smiles1: str):
-        mol = smiles_to_mol(smiles1)
+    mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
-    qed = QED.qed(mol)
-        return qed
+    return QED.qed(mol)
 
 
 def compute_lip(smiles1: str):
