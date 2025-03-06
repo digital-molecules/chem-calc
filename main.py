@@ -13,12 +13,6 @@ if smiles1:
         props = compute_properties(smiles1)
         st.write("Computed Properties:", props)
 
-        lip_info = compute_lip(smiles1)
-        if lip_info:
-            st.success("This molecule follows Lipinski's Rule of 5! 😺")
-        else:
-            st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
-
     with col2:
         st.subheader("Molecular Formula")
         formula = molecular_formula(smiles1)
@@ -28,6 +22,12 @@ if smiles1:
         if smiles1 and smiles2:
             sim = compute_similarity(smiles1, smiles2)
             st.write("Tanimoto Similarity:", sim)
+
+lip_info = compute_lip(smiles1)
+if lip_info:
+    st.success("This molecule follows Lipinski's Rule of 5! 😺")
+else:
+    st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
 
 
 
