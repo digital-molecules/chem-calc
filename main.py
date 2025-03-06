@@ -14,7 +14,7 @@ if smiles1:
     if "Error" in qed_info:
         st.error(qed_info["Error"])
     else:
-        if qed_info["Passes QED Drug-Likeness"]:
+        if qed_info:
             st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
         else:
             st.warning("❌ This molecule does **NOT** meet the QED drug-likeness criteria. 😿")
