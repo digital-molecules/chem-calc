@@ -18,7 +18,7 @@ def compute_properties(smiles1: str):
         "Ring Count": rdMolDescriptors.CalcNumRings(mol),
         "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
         "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-        "Synthetic Accessibility": QED.qed(mol),
+        "QED Drug-Likeness: QED.qed(mol),
     }
     return properties
 
@@ -29,7 +29,7 @@ def render_molecule(smiles1: str):
         return img
     return None
 
-def compute_qed(smiles1: str):
+def compute_lipinski(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
@@ -50,7 +50,7 @@ def compute_qed(smiles1: str):
         log_p < 5
     )
 
-    return {"This compound's QED score is close to 1, it passes the drug-likeness test": successful_parameters}
+    return {"This compound passes Lipinski's Rule of 5": successful_parameters}
 
 
 def compute_similarity(smiles1: str, smiles2: str):
@@ -60,9 +60,9 @@ def compute_similarity(smiles1: str, smiles2: str):
     if mol1 is None or mol2 is None:
         return ("Invalid compound 😿")
 
-    fp1 = Chem.RDKFingerprint(mol1) #smiles fingerprints
-    fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
-
+    fp1 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol1, radius=2, nBits=2048) #Morgan Fingerprints
+    fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
+    
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
 
