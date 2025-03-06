@@ -2,12 +2,12 @@ from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED
 #from rdkit.Chem.Fragments import fr_Al_OH, fr_ketone, fr_amide, fr_aldehyde, fr_COO, fr_ester, fr_ether, fr_nitrile, fr_halogen, fr_phenol
 
-def smiles_to_mol(smiles: str):
-    mol = Chem.MolFromSmiles(smiles)
+def smiles_to_mol(smiles1: str):
+    mol = Chem.MolFromSmiles(smiles1)
     return mol
 
-def compute_properties(smiles: str):
-    mol = smiles_to_mol(smiles)
+def compute_properties(smiles1: str):
+    mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
 
@@ -22,8 +22,8 @@ def compute_properties(smiles: str):
     }
     return properties
 
-def compute_qed(smiles: str):
-    mol = smiles_to_mol(smiles)
+def compute_qed(smiles1: str):
+    mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
 
