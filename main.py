@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_lip, compute_similarity
+from chem_calc import compute_properties, compute_lip, molecular_formula, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
 st.write("Thanks to the brilliant Suliman Sharif for his public resources.")
@@ -21,7 +21,7 @@ if smiles1:
 
     with col2:
         st.subheader("Molecular Formula")
-        formula = molecular_formula(smiles)
+        formula = molecular_formula(smiles1)
         st.write(f"Molecular Formula: {formula}")
         st.subheader("Molecular Comparison")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
