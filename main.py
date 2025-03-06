@@ -50,7 +50,7 @@ if smiles1:
         st.write(props)
         qed = compute_qed(smiles1)
         st.markdown(
-        f"<h3 style='color: #4B9CD3;'>QED Drug-Likeness:</h3> <p style='font-size: 20px; color: #2E8B57;'>{qed}</p>",
+        f"<h3 style='font-size: 20px; color: #7b1462;'>QED Drug-Likeness:</h3> <p style='font-size: 15px; font-weight: bold; color: #0cc8c8;'>{qed}</p>",
         unsafe_allow_html=True
         )
 
