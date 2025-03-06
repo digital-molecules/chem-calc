@@ -9,10 +9,9 @@ if smiles1:
     props = compute_properties(smiles1)
     st.write("Computed Properties:", props)
 
-if smiles1:
-    mol_img = render_molecule(smiles1)
-    if mol_img:
-        st.image(mol_img, caption="Molecular Structure", use_container_width=True)
+mol_img = render_molecule(smiles1)
+if mol_img:
+    st.image(mol_img, caption="Molecular Structure", use_container_width=True)
     
 if smiles1:
     qed_info = compute_qed(smiles1)
