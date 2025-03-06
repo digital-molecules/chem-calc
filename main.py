@@ -4,6 +4,11 @@ from chem_calc import compute_properties, compute_lip, molecular_formula, comput
 st.title("Thally's QSAR Toolkit")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
+with st.sidebar:
+    st.header("This is header")
+    st.subheader("This is subheader")
+    st.write("This is text")
+
 smiles1 = st.text_input("**Enter a valid SMILES notation please:**")
 
 if smiles1:
