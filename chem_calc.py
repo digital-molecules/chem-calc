@@ -1,5 +1,5 @@
 from rdkit import Chem
-from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED
+from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED, Draw
 #from rdkit.Chem.Fragments import fr_Al_OH, fr_ketone, fr_amide, fr_aldehyde, fr_COO, fr_ester, fr_ether, fr_nitrile, fr_halogen, fr_phenol
 
 def smiles_to_mol(smiles1: str):
@@ -59,7 +59,12 @@ def compute_similarity(smiles1: str, smiles2: str):
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
     return {"Tanimoto Similarity": similarity}
 
-
+def render_image(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol:
+        img = Draw.MolToImage(mol, size=(300, 300))
+        return img
+    return None
 
 
 
