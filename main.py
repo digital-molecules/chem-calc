@@ -38,7 +38,7 @@ if smiles1:
         st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
 
 st.markdown("---")
-st.write("*Make sure to open the sidebar for more information.*)
+st.write("*Make sure to open the sidebar for more information.*")
 
 
     #img = render_molecule_image(smiles1)
