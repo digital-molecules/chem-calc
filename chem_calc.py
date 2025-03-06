@@ -6,11 +6,10 @@ def smiles_to_mol(smiles: str):
     mol = Chem.MolFromSmiles(smiles)
     return mol
 
-
 def compute_properties(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
-        return ("Make sure you enter a valid SMILES notation")
+        return ("Invalid compound 😿")
 
     properties = {
         "Molecular Weight": Descriptors.MolWt(mol),
@@ -23,6 +22,29 @@ def compute_properties(smiles: str):
     }
     return properties
 
+def compute_similarity(smiles1: str, smiles2: str):
+    mol1 = smiles_to_mol(smiles1)
+    mol2 = smiles_to_mol(smiles2)
+
+    if mol1 is None or mol2 is None:
+        return ("Invalid compound 😿")
+
+    fp1 = Chem.RDKFingerprint(mol1)
+    fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
+
+    similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
+    return f{"Tanimoto Similarity": similarity}
+
+
+
+
+
+
+
+
+
+
+#removed function from the streamlit app, kept for reference purposes
 def detect_functional_groups(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
@@ -41,16 +63,3 @@ def detect_functional_groups(smiles: str):
         "Phenol": fr_phenol(mol),
     }
     return functional_groups
-
-def compute_similarity(smiles1: str, smiles2: str):
-    mol1 = smiles_to_mol(smiles1)
-    mol2 = smiles_to_mol(smiles2)
-
-    if mol1 is None or mol2 is None:
-        return ("Make sure you enter a valid SMILES notation")
-
-    fp1 = Chem.RDKFingerprint(mol1)
-    fp2 = Chem.RDKFingerprint(mol2)
-
-    similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
-    return {"Tanimoto Similarity": similarity}
