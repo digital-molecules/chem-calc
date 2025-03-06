@@ -6,7 +6,7 @@ with st.sidebar:
     st.header("**QSAR**")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
     st.write("💡 This is text")
-    st.subheader("🤔 What are QSAR parameters?")
+    st.subheader("🤔 What are the parameters of QSAR?")
     st.write("💡 This is text")
     st.subheader("🤔 Why is QSAR useful?")
     st.write("💡 This is text")
