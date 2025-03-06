@@ -22,6 +22,14 @@ def compute_properties(smiles1: str):
     }
     return properties
 
+def compute_qed(smiles1: str):
+        mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    qed = QED.qed(mol)
+        return qed
+
+
 def compute_lip(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
@@ -50,7 +58,6 @@ def molecular_formula(smiles1):
     if mol is None:
         return "Invalid compound 😿"
     return Chem.rdMolDescriptors.CalcMolFormula(mol)
-
 
 
 def compute_similarity(smiles1: str, smiles2: str):
