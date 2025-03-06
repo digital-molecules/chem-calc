@@ -10,6 +10,7 @@ if smiles1:
     st.write("Computed Properties:", props)
     
 if smiles1:
+    qed_info = compute_qed(smiles1)
     if qed_info:
         st.success("✅ This molecule meets the QED drug-likeness criteria! 😺")
     else:
