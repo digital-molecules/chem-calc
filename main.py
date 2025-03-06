@@ -11,7 +11,7 @@ with st.sidebar:
 st.title("Thally's QSAR Toolkit")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
-smiles1 = st.text_input("**Enter a valid SMILES notation please:**")
+smiles1 = st.text_input("**Please enter valid SMILES:**")
 
 if smiles1:
     col1, col2 = st.columns(2)
