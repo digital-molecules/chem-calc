@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, render_molecule, compute_lipinski, compute_similarity
+from chem_calc import compute_properties, compute_lipinski, compute_similarity
 
 st.title("Thally's QSAR Toolkit")
 st.write("*Thanks to the brilliant Suliman Sharif for his public resources.*")
