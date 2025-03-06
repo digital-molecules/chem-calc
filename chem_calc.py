@@ -33,7 +33,7 @@ def compute_similarity(smiles1: str, smiles2: str):
     fp2 = Chem.RDKFingerprint(mol2) #takes both 'canonical' and 'isomeric' smiles into account
 
     similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
-    return f{"Tanimoto Similarity": similarity}
+    return {"Tanimoto Similarity": similarity}
 
 
 
