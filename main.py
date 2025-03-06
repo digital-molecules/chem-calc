@@ -49,7 +49,7 @@ if smiles1:
         props = compute_properties(smiles1)
         st.write(props)
         qed = compute_qed(smiles1)
-        st.markdown("QED Drug-Likeness": qed)
+        st.markdown("QED Drug-Likeness:", qed)
 
     with col2:
         st.subheader("Molecular Formula")
