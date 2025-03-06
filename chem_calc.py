@@ -22,7 +22,7 @@ def compute_properties(smiles: str):
     }
     return properties
 
-def qed(smiles: str):
+def compute_qed(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
         return ("Invalid compound 😿")
