@@ -27,8 +27,7 @@ def render_molecule(smiles1: str):
     if mol:
         img = Draw.MolToImage(mol, size=(300, 300))
         return img
-    else:
-        return None
+    return None
 
 def compute_qed(smiles1: str):
     mol = smiles_to_mol(smiles1)
