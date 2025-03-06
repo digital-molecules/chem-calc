@@ -39,6 +39,8 @@ if smiles1:
 
 st.markdown("---")
 st.write("*Make sure to open the sidebar for more information.*")
+st.markdown(<div style="text-align: center"> "Make sure to open the sidebar for more information." </div>)
+
 
 
     #img = render_molecule_image(smiles1)
