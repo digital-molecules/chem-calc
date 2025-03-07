@@ -43,7 +43,7 @@ with st.sidebar:
 
     st.header("Veber's rule")
     st.subheader("🤔 What is 'Veber's Rule'?")
-    st.write("💡 _'Veber's Rule'_ proposes that a compound is more likely to have sufficient oral bioavailability when it has 10 or fewer rotatable bonds and PSA of less than or equal to 140Å². [[15]](https://pubs.acs.org/doi/10.1021/jm020017n)")
+    st.write("💡 _'Veber's Rule'_ proposes that a compound is more likely to have sufficient oral bioavailability when it has 10 or fewer rotatable bonds and PSA of less than or equal to 140Å². [[15]](https://pubs.acs.org/doi/10.1021/jm020017n) It's often used together with Lipinki's Rule to develop molecules with more 'drug-like' traits.")
 
     st.caption("Have fun with cheminformatics!")
 
