@@ -39,7 +39,7 @@ with st.sidebar:
     
     st.header("Lipinski's Rule of 5")
     st.subheader("🤔 What is 'Lipinski's Rule of 5'?")
-    st.write("💡 _Lipinski's Rule of 5'_ says that '**poor** absorption and permeation are more likely when there are more than 5 H-bond donors, the molecular weight is over 500Da, the logP is over 5 and there are more than 10 H-bond acceptors' and that 'compound classes that are substrates for biological transporters are exceptions to the rule.' [[14]](https://www.sciencedirect.com/science/article/abs/pii/S0169409X96004231) We should be careful when using it, as it is not intended to exclude molecules from being potential orally administered drug candidates, but rather to serve as a guideline.")
+    st.write("💡 _Lipinski's Rule of 5'_ says, in regards to a drug's oral bioavailability, that '**poor** absorption and permeation are more likely when there are more than 5 H-bond donors, the molecular weight is over 500Da, the logP is over 5 and there are more than 10 H-bond acceptors' and that 'compound classes that are substrates for biological transporters are exceptions to the rule.' [[14]](https://www.sciencedirect.com/science/article/abs/pii/S0169409X96004231) We should be careful when using it, as it is not intended to exclude molecules from being potential orally administered drug candidates, but rather to serve as a guideline.")
 
     st.header("Veber's rule")
     st.subheader("🤔 What is 'Veber's Rule'?")
