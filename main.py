@@ -74,7 +74,7 @@ if smiles1:
 
 if smiles1:
     lip_info = compute_lip(smiles1)
-    if lip_info:
+    if lip_info.get("This compound passes Lipinski's Rule of 5 and Verber's Rule"):
         st.success("This molecule follows Lipinski's Rule of 5 and Verber's Rule! 😺")
     else:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
