@@ -12,7 +12,7 @@ with st.sidebar:
     st.write("💡 The reliability of QSAR methods has been challenged for well over a decade [[3]](https://pubs.acs.org/doi/10.1021/jm020155c). The SAR paradox refers to how structurally similar molecules may, in fact, not have similar biological properties. Thus, it is important to develop dynamic and adaptable models that can be trained with experimental data, using methods such as machine learning. [[4]](https://pmc.ncbi.nlm.nih.gov/articles/PMC6270197/)")
 
     st.header("LogP")
-    st.subheader("🤔 What is LogP and why is it important?")
+    st.subheader("🤔 What is logP and why is it important?")
     st.write("💡 _Lipophilicity_ represents the compound's preference for lipid phases over aqueous ones. It plays a major role in a molecule's absorption, distribution within the body, metabolism and excretion (ADME properties), as well as its ability to penetrate biological membranes and barriers. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf) It is mathematically defined by the partition coefficient P, the measurement of the differential solubility of a compound in two immiscible solvents. *LogP* describes lipophilicity in neutral compounds only, so we should be careful to measure the logP only at a pH where the molecule is in its neutral form and not ionized. [[6]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/logp_vs_logd.pdf)")
     st.subheader("🤔 How do we interpet LogP values?")
     st.write("💡 Higher logP means higher lipophilicity. A negative logP value indicates that the compound is hydrophilic. A logP of zero indicates the molecule is equally dispersed among the two phases. Based on Pfizer's rule, better known as Lipinski's Rule of 5, a molecule for oral administration should have a logP of less than 5. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf)")
@@ -31,7 +31,7 @@ with st.sidebar:
     
     st.header("Tanimoto Index")
     st.subheader("🤔 What is Tanimoto Index and why is it useful?")
-    st.write("💡 A molecular fingerprint is a powerful and compact representation of a molecule as a binary vector, describing the presence or absence of a specific chemical property or structure within the compound [[11]](https://onlinelibrary.wiley.com/doi/10.1002/minf.201900130). The __Tanimoto Index__, or Jaccard coefficient, divides the shared features between two molecules to the total number of unique features present in either molecule. [[12]](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479812/)")
+    st.write("💡 A molecular fingerprint is a powerful and compact representation of a molecule as a binary vector, describing the presence or absence of a specific chemical property or structure within the compound [[11]](https://onlinelibrary.wiley.com/doi/10.1002/minf.201900130). The *Tanimoto Index*, or Jaccard coefficient, divides the shared features between two molecules to the total number of unique features present in either molecule. [[12]](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479812/)")
     st.subheader("🤔 What are Morgan Fingerprints?")
     st.write("💡 _Morgan Fingerprints_ are based on the Morgan algorithm and were created to solve the molecular isomorphism problem - to identify when two molecules, with different atom numberings, are the same. Individual numerical identifiers are assigned to each of the atoms in a molecule, providing more accurate comparisons compared to Daylight fingerprints. [[13]](https://pubs.acs.org/doi/abs/10.1021/ci100050t)")
     st.subheader("🤔 How do we interpet the results of the comparison?")
@@ -59,7 +59,7 @@ if smiles1:
         mw = compute_mw(smiles1)
         st.write("Molecular Weight:", mw)
         logp = compute_logp(smiles1)
-        st.write("LogP:", logp)
+        st.write("logP:", logp)
         tpsa = compute_tpsa(smiles1)
         st.write("TPSA:", tpsa)
         rotbond = compute_rotbond(smiles1)
