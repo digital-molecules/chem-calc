@@ -75,7 +75,7 @@ if smiles1:
     elif lip_info.get("This compound passes Lipinski's Rule of 5 and Verber's Rule"):
         st.success("This molecule follows Lipinski's Rule of 5 and Verber's Rule! 😺")
     else:
-        st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
+        st.warning("This molecule does **NOT** follow either Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 st.markdown("---")
