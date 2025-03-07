@@ -60,10 +60,7 @@ if smiles1:
         hba = compute_hba(smiles1)
         st.write("H-Bond Acceptors:", hba)
         qed = compute_qed(smiles1)
-        st.markdown(
-             f"<p style='font-size: 18px; font-weight: bold; color: ##c12e61;'>QED Drug-Likeness: {qed}</p>",
-            unsafe_allow_html=True
-        )
+        st.write("QED Drug-Likeness:", qed)
 
     with col2:
         st.subheader("Molecular Formula")
