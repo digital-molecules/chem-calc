@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_mw, compute_logp, compute_tpsa, compute_rotbond, compute_hbd, compute_hba, compute_qed, compute_lip, molecular_formula, compute_similarity
+from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, compute_hbd, compute_hba, compute_qed, compute_lip, molecular_formula, compute_similarity
 
 
 with st.sidebar:
