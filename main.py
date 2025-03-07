@@ -92,20 +92,3 @@ if smiles1:
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 st.markdown("---")
 st.write("Made by 'ares to cat'")
-
-
-
-
-        #st.subheader("Molecular Formula")
-        #formula = molecular_formula(smiles1)
-        #st.write(f"Molecular Formula: {formula}")
-
-    #img = render_molecule_image(smiles1)
-    #if img:
-        #st.image(img, caption="Molecule Structure")
-
-
-    
-#if smiles1:
-    #funct = detect_functional_groups(smiles1)
-    #st.write("Functional Group(s):", funct)
