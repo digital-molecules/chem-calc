@@ -40,14 +40,15 @@ def compute_lip(smiles1: str):
     h_bond_donors = rdMolDescriptors.CalcNumHBD(mol)
     h_bond_acceptors = rdMolDescriptors.CalcNumHBA(mol)
     log_p = Descriptors.MolLogP(mol)
+    tpsa = rdMolDescriptors.CalcTPSA(mol)
 
     successful_parameters = (
-        molecular_weight < 400 and
-        ring_count > 0 and
-        rotatable_bonds < 5 and
+        molecular_weight < 500 and
+        rotatable_bonds <= 10 and
         h_bond_donors <= 5 and
         h_bond_acceptors <= 10 and
-        log_p < 5
+        log_p < 5 and
+        tpsa <= 140
     )
 
     return {"This compound passes Lipinski's Rule of 5": successful_parameters}
