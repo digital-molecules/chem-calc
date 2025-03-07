@@ -28,7 +28,7 @@ def compute_rotbond(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
-    return Descriptors.NumRotatableBonds
+    return Descriptors.NumRotatableBonds(mol)
 
 def compute_hbd(smiles1: str):
     mol = smiles_to_mol(smiles1)
