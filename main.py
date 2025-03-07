@@ -70,7 +70,7 @@ if smiles1:
         st.write("H-Bond Acceptors:", hba)
         
     with col2:
-        st.subheader("QED Drug-Likeness")
+        st.subheader("Quantitative Drug-Likeness")
         qed = compute_qed(smiles1)
         st.write("QED:", qed)
         st.subheader("Tanimoto Similarity")
