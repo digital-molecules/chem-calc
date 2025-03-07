@@ -46,7 +46,6 @@ if smiles1:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Molecular Properties")
-        props = compute_properties(smiles1)
         mw = compute_mw(smiles1)
         st.write("MW:", mw)
         logp = compute_logp(smiles1)
