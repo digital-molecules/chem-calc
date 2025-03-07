@@ -17,17 +17,25 @@ with st.sidebar:
     st.subheader("🤔 How do we interpet LogP values?")
     st.write("💡 Higher logP means higher lipophilicity. A negative logP value indicates that the compound is hydrophilic. A logP of zero indicates the molecule is equally dispersed among the two phases. Based on Pfizer's rule, better known as Lipinski's Rule of 5, a molecule for oral administration should have a logP of less than 5. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf)")
 
+    st.header("TPSA")
+    st.subheader("🤔 What is TPSA and why is it important?")
+    st.write("💡 Polar Surface Area (PSA) is the sum of the contributions to the molecular van der Waals surface area of polar atoms. _Topological Polar Surface Area (TPSA)_ is the simplified measurement of PSA, which helps us reduce the required computational power by avoiding the necessity to calculate ligand 3D structures or biological conformations. TPSA is an important parameter for a large and diverse pharmaceutical data sets. Just like logP, it allows us to make ADME predictions. [[7]](https://pmc.ncbi.nlm.nih.gov/articles/PMC7549127/)")
+    st.subheader("🤔 How do we interpet TPSA values?")
+    st.write("💡 In general, a drug presumed for intestinal absorption should have a TPSA of less than 140Å² and less than 90Å² if it's intended for blood-brain barrier (BBB) penetration. [[8]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5146717)")
+    
     st.header("QED")
     st.subheader("🤔 What is QED and why is it important?")
-    st.write("💡 This is text")
+    st.write("💡 _Quantative Drug Likeness (QED)_ is a based on 'desirability functions', which are used for multi-criteria optimizations. QED is shows us a deterministic score depending on how closely a molecule aligns with the properties of known oral pharmaceuticals. It is based on the following parameters: molecular weight (MW), lipophilicity (logP), number of hydrogen bond donors (HBD), number of hydrogen bond acceptors (HBA), molecular polar surface area (PSA), number of rotatable bonds (ROTB), the number of aromatic rings (AROM) and number of structural alerts (ALERTS). [[9]](https://pmc.ncbi.nlm.nih.gov/articles/PMC3524573/)")
     st.subheader("🤔 How do we interpet QED values?")
-    st.write("💡 This is text")
+    st.write("💡 QED gives us a score from 1 to 0; the closer to 1, the higher the 'drug-likeness'. [[10]](https://academic.oup.com/bib/article/25/4/bbae321/7709089)")
     
     st.header("Tanimoto Index")
     st.subheader("🤔 What is Tanimoto Index and why is it useful?")
-    st.write("💡 This is text")
+    st.write("💡 A molecular fingerprint is a powerful and compact representation of a molecule as a binary vector, describing the presence or absence of a specific chemical property or structure within the compound [[11]](https://onlinelibrary.wiley.com/doi/10.1002/minf.201900130). The __Tanimoto Index__, or Jaccard coefficient, divides the shared features between two molecules to the total number of unique features present in either molecule. [[12]](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479812/)")
+    st.subheader("🤔 What are Morgan Fingerprints?")
+    st.write("💡 _Morgan Fingerprints_ are based on the Morgan algorithm and were created to solve the molecular isomorphism problem - to identify when two molecules, with different atom numberings, are the same. It assigns individual numerical identifiers to atoms in a molecule and provides more accuracy compared to Daylight fingerprints. [[13]](https://pubs.acs.org/doi/abs/10.1021/ci100050t)")
     st.subheader("🤔 How do we interpet the results of the comparison?")
-    st.write("💡 This is text")
+    st.write("💡 The Tanimoto Index gives a score from 0 to 1, the higher the index the more similar the molecules are and thus more likely to have similar properties.")
     
     st.header("Lipinski's Rule of 5")
     st.subheader("🤔 What is 'Lipinski's Rule of 5'?")
@@ -35,7 +43,13 @@ with st.sidebar:
     st.subheader("🤔 How accurate is it?")
     st.write("💡 This is text")
 
-st.title("Metrichemical: A chemist's pocket toolbox")
+    st.header("Verber's rule")
+    st.subheader("🤔 What is 'Verber's Rule'?")
+    st.write("💡 This is text")
+    st.subheader("🤔 How accurate is it?")
+    st.write("💡 This is text")
+
+st.title("Metricular: A pocket molecular calculator")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
 smiles1 = st.text_input("**Please enter a valid SMILES:**")
