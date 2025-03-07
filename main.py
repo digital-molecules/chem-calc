@@ -87,45 +87,6 @@ st.markdown("---")
 st.markdown("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 
 
-def compute_mw(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return Descriptors.MolWt(mol)
-
-def compute_logp(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return Descriptors.MolLogP(mol)
-
-def compute_tpsa(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return rdMolDescriptors.CalcTPSA(mol)
-
-def compute_rotbond(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return Descriptors.NumRotatableBonds
-
-def compute_hbd(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return rdMolDescriptors.CalcNumHBD(mol)
-
-def compute_hba(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-    return rdMolDescriptors.CalcNumHBA(mol)
-
-
-
-
     #img = render_molecule_image(smiles1)
     #if img:
         #st.image(img, caption="Molecule Structure")
