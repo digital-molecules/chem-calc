@@ -56,13 +56,11 @@ if smiles1:
         st.write("H-Bond Donors:", hbd)
         hba = compute_hba(smiles1)
         st.write("H-Bond Acceptors:", hba)
+        
+    with col2:
+        st.subheader("QED Drug-Likeness")
         qed = compute_qed(smiles1)
         st.write("QED Drug-Likeness:", qed)
-
-    with col2:
-        st.subheader("Molecular Formula")
-        formula = molecular_formula(smiles1)
-        st.write(f"Molecular Formula: {formula}")
         st.subheader("Tanimoto Similarity")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
         if smiles1 and smiles2:
@@ -82,6 +80,13 @@ if smiles1:
 st.markdown("---")
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 
+
+
+
+
+        #st.subheader("Molecular Formula")
+        #formula = molecular_formula(smiles1)
+        #st.write(f"Molecular Formula: {formula}")
 
     #img = render_molecule_image(smiles1)
     #if img:
