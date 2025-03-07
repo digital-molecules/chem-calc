@@ -1,6 +1,5 @@
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdMolDescriptors, DataStructs, QED
-#from rdkit.Chem.Fragments import fr_Al_OH, fr_ketone, fr_amide, fr_aldehyde, fr_COO, fr_ester, fr_ether, fr_nitrile, fr_halogen, fr_phenol
 
 def smiles_to_mol(smiles1: str):
     mol = Chem.MolFromSmiles(smiles1)
@@ -89,57 +88,3 @@ def compute_similarity(smiles1: str, smiles2: str):
     fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
 
     return DataStructs.FingerprintSimilarity(fp1, fp2)
-
-
-
-
-
-
-
-
-
-
-
-#'Draw' doesnt work :(
-def render_molecule_image(smiles: str):
-    mol = smiles_to_mol(smiles)
-    if mol is None:
-        return None
-    img = Draw.MolToImage(mol)  # Generate the image without needing GUI
-    return img
-
-#removed function from the streamlit app, kept for reference purposes
-def compute_properties(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-
-    properties = {
-        "Molecular Weight": Descriptors.MolWt(mol),
-        "LogP": Descriptors.MolLogP(mol),
-        "TPSA": rdMolDescriptors.CalcTPSA(mol),
-        "Number of Rotatable Bonds": Descriptors.NumRotatableBonds(mol),
-        "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
-        "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-    }
-    return properties
-
-
-def detect_functional_groups(smiles: str):
-    mol = smiles_to_mol(smiles)
-    if mol is None:
-        return ("Invalid compound 😿")
-
-    functional_groups = {
-        "Alcohol": fr_Al_OH(mol),
-        "Ketone": fr_ketone(mol),
-        "Amide": fr_amide(mol),
-        "Aldehyde": fr_aldehyde(mol),
-        "Carboxylic Acid": fr_COO(mol),
-        "Ester": fr_ester(mol),
-        "Ether": fr_ether(mol),
-        "Nitrile": fr_nitrile(mol),
-        "Halogen": fr_halogen(mol),
-        "Phenol": fr_phenol(mol),
-    }
-    return functional_groups
