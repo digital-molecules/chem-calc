@@ -49,6 +49,8 @@ with st.sidebar:
     st.subheader("🤔 How accurate is it?")
     st.write("💡 This is text")
 
+    st.caption("Have fun with cheminformatics!")
+
 st.title("Metricular: A pocket molecular calculator")
 st.write("Thanks to the brilliant Suliman Sharif and Vaneet Saini for their public resources.")
 
