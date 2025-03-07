@@ -3,7 +3,6 @@ from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, c
 
 
 with st.sidebar:
-    st.write(f"#{Handbook}")
     st.title("QSAR")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
     st.write("💡 Quantitative structure-activity relationship (QSAR) is a computational method which helps us determine the relationship between chemical structures and biological activity. It is based upon the idea that changes in bioactivity are connected to structural and molecular changes in a group of chemicals. [[1]](https://www.sciencedirect.com/science/article/abs/pii/B9780443186387000025)")
@@ -81,7 +80,7 @@ if smiles1:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
 st.markdown("---")
-st.markdown("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
+st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 
 
     #img = render_molecule_image(smiles1)
