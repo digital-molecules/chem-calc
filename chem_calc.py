@@ -51,7 +51,7 @@ def compute_lip(smiles1: str):
         tpsa <= 140
     )
 
-    return {"This compound passes Lipinski's Rule of 5": successful_parameters}
+    return {"This compound passes Lipinski's Rule of 5 and Verber's Rule": successful_parameters}
 
 def molecular_formula(smiles1):
     mol = Chem.MolFromSmiles(smiles1)
