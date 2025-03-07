@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_properties, compute_qed, compute_lip, molecular_formula, compute_similarity
+from chem_calc import compute_properties, compute_mw, compute_logp, compute_tpsa, compute_rotbond, compute_hbd, compute_hba, compute_qed, compute_lip, molecular_formula, compute_similarity
 
 
 with st.sidebar:
@@ -47,7 +47,18 @@ if smiles1:
     with col1:
         st.subheader("Molecular Properties")
         props = compute_properties(smiles1)
-        st.write(props)
+        mw = compute_mw(smiles1)
+        st.write("MW:", mw)
+        logp = compute_logp(smiles1)
+        st.write("LogP:", logp)
+        tpsa = compute_tpsa(smiles1)
+        st.write("TPSA:", tpsa)
+        rotbond = compute_rotbond(smiles1)
+        st.write("Number of Rotatable Bonds:", rotbond)
+        hbd = compute_hbd(smiles1)
+        st.write("H-Bond Donors:", hbd)
+        hba = compute_hba(smiles1)
+        st.write("H-Bond Acceptors:", hba)
         qed = compute_qed(smiles1)
         st.markdown(
              f"<p style='font-size: 18px; font-weight: bold; color: ##c12e61;'>QED Drug-Likeness: {qed}</p>",
@@ -74,6 +85,45 @@ if smiles1:
 
 st.markdown("---")
 st.markdown("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
+
+
+def compute_mw(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return Descriptors.MolWt(mol)
+
+def compute_logp(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return Descriptors.MolLogP(mol)
+
+def compute_tpsa(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return rdMolDescriptors.CalcTPSA(mol)
+
+def compute_rotbond(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return Descriptors.NumRotatableBonds
+
+def compute_hbd(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return rdMolDescriptors.CalcNumHBD(mol)
+
+def compute_hba(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+    return rdMolDescriptors.CalcNumHBA(mol)
+
+
 
 
     #img = render_molecule_image(smiles1)
