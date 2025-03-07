@@ -78,6 +78,7 @@ if smiles1:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
 st.markdown("---")
+st.write("Made by AresToCat")
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 
 
