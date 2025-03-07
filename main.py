@@ -74,7 +74,7 @@ if smiles1:
         qed = compute_qed(smiles1)
         st.write("QED:", qed)
         st.subheader("Molecular Similarity")
-        smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
+        smiles2 = st.text_input("**Enter another SMILES for comparison:**")
         if smiles1 and smiles2:
             sim = compute_similarity(smiles1, smiles2)
             st.write("Tanimoto Index:", sim)
