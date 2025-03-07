@@ -39,15 +39,11 @@ with st.sidebar:
     
     st.header("Lipinski's Rule of 5")
     st.subheader("🤔 What is 'Lipinski's Rule of 5'?")
-    st.write("💡 This is text")
-    st.subheader("🤔 How accurate is it?")
-    st.write("💡 This is text")
+    st.write("💡 _Lipinski's Rule of 5'_ says that '**poor** absorption and permeation are more likely when there are more than 5 H-bond donors, the molecular weight is over 500Da, the logP is over 5 and there are more than 10 H-bond acceptors' and that 'compound classes that are substrates for biological transporters are exceptions to the rule.' [[14]](https://www.sciencedirect.com/science/article/abs/pii/S0169409X96004231) We should be careful when using it, as it is not created to exclude molecules from having potential drug-like properties, but rather used as a guideline.")
 
     st.header("Verber's rule")
     st.subheader("🤔 What is 'Verber's Rule'?")
-    st.write("💡 This is text")
-    st.subheader("🤔 How accurate is it?")
-    st.write("💡 This is text")
+    st.write("💡 _'Verber's Rule'_ proposes that a compound can be intended for oral bioavailability when there are 10 or fewer rotatable bonds and when the PSA is less or equal to 140Å². [[15]](https://pubs.acs.org/doi/10.1021/jm020017n)")
 
     st.caption("Have fun with cheminformatics!")
 
@@ -61,7 +57,7 @@ if smiles1:
     with col1:
         st.subheader("Molecular Properties")
         mw = compute_mw(smiles1)
-        st.write("MW:", mw)
+        st.write("Molecular Weight:", mw)
         logp = compute_logp(smiles1)
         st.write("logP:", logp)
         tpsa = compute_tpsa(smiles1)
@@ -86,10 +82,10 @@ if smiles1:
 
 if smiles1:
     lip_info = compute_lip(smiles1)
-    if not isinstance(lip_info, dict):  # If it's not a dictionary, assume it's an error message
+    if not isinstance(lip_info, dict):
         st.error(lip_info if isinstance(lip_info, str) else "An unknown error occurred. 😿")
-    elif lip_info.get("This compound passes Lipinski's Rule of 5 and Verber's Rule"):
-        st.success("This molecule follows Lipinski's Rule of 5 and Verber's Rule! 😺")
+    elif lip_info.get("This compound passes Lipinski's Rule of 5 and Veber's Rule"):
+        st.success("This molecule follows Lipinski's Rule of 5 and Veber's Rule! 😺")
     else:
         st.warning("This molecule does **NOT** follow either Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
