@@ -3,6 +3,7 @@ from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, c
 
 
 with st.sidebar:
+    st.markdown("###Handbook") 
     st.title("QSAR")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
     st.write("💡 Quantitative structure-activity relationship (QSAR) is a computational method which helps us determine the relationship between chemical structures and biological activity. It is based upon the idea that changes in bioactivity are connected to structural and molecular changes in a group of chemicals. [[1]](https://www.sciencedirect.com/science/article/abs/pii/B9780443186387000025)")
