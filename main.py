@@ -79,9 +79,9 @@ if smiles1:
 if smiles1:
     lip_info = compute_lip(smiles1)
     if lip_info:
-        st.success("This molecule follows Lipinski's Rule of 5! 😺")
+        st.success("This molecule follows Lipinski's Rule of 5 and Verber's Rule! 😺")
     else:
-        st.warning("This molecule does **NOT** follow Lipinski's Rule of 5. 😿")
+        st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
 st.markdown("---")
 st.markdown("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
