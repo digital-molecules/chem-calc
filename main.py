@@ -47,7 +47,7 @@ if smiles1:
         mw = compute_mw(smiles1)
         st.write("MW:", mw)
         logp = compute_logp(smiles1)
-        st.write("LogP:", logp)
+        st.write("logP:", logp)
         tpsa = compute_tpsa(smiles1)
         st.write("TPSA:", tpsa)
         rotbond = compute_rotbond(smiles1)
