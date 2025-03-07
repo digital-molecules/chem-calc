@@ -77,13 +77,9 @@ if smiles1:
     else:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
-col1, col2 = st.columns(2)
-with col1:
-    st.write("Made by 'ares to cat'")
-
-st.markdown("---")
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
-
+st.markdown("---")
+st.write("Made by 'ares to cat'")
 
 
 
