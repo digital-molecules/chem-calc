@@ -60,7 +60,7 @@ if smiles1:
     with col2:
         st.subheader("QED Drug-Likeness")
         qed = compute_qed(smiles1)
-        st.write("QED Drug-Likeness:", qed)
+        st.write("Drug-Likeness:", qed)
         st.subheader("Tanimoto Similarity")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
         if smiles1 and smiles2:
