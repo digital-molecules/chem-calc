@@ -3,14 +3,13 @@ from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, c
 
 
 with st.sidebar:
-    st.title("Guide")
-    st.header("QSAR")
+    st.title("QSAR")
     st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
-    st.write("💡 Quantitative structure-activity relationship (QSAR) is a computational method which help us determine the relationship between chemical structures and biological activity. It is based upon the idea that changes in bioactivity are connected to structural and molecular changes in a group of chemicals. [[1]](https://www.sciencedirect.com/science/article/abs/pii/B9780443186387000025)")
+    st.write("💡 Quantitative structure-activity relationship (QSAR) is a computational method which helps us determine the relationship between chemical structures and biological activity. It is based upon the idea that changes in bioactivity are connected to structural and molecular changes in a group of chemicals. [[1]](https://www.sciencedirect.com/science/article/abs/pii/B9780443186387000025)")
     st.subheader("🤔 What are the parameters of QSAR?")
-    st.write("💡 There are many physicochemical parameters that we can take into consideration when predicting the behaviour of a substance within a biological system. In this app, we calculate only some of them, like lipophilicity (logP), but we could also calculate the dipole moment, the pka, the LUMO, the HOMO, and many more. [[2]](https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2024.1424402/full)")
+    st.write("💡 There are many physicochemical parameters that we can take into consideration when predicting the behaviour of a substance within a biological system. In this app, we calculate only some of them, like lipophilicity (logP), but we could also calculate the dipole moment, the pKa, the LUMO, the HOMO, and many more. [[2]](https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2024.1424402/full)")
     st.subheader("🤔 What is the SAR paradox?")
-    st.write("💡 The reliability of QSAR methods have been challenged for well over a decade. [[3]](https://pubs.acs.org/doi/10.1021/jm020155c) The SAR paradox refers to the fact that structurally similar molecules may, in fact, not have similar biological properties. Thus, it is important to develop dynamic and adaptable models that can be trained with experimental data, using methods such as machine learning. [[4]](https://pmc.ncbi.nlm.nih.gov/articles/PMC6270197/)")
+    st.write("💡 The reliability of QSAR methods have been challenged for well over a decade [[3]](https://pubs.acs.org/doi/10.1021/jm020155c). The SAR paradox refers to the fact that structurally similar molecules may, in fact, not have similar biological properties. Thus, it is important to develop dynamic and adaptable models that can be trained with experimental data, using methods such as machine learning. [[4]](https://pmc.ncbi.nlm.nih.gov/articles/PMC6270197/)")
 
     st.header("LogP")
     st.subheader("🤔 What is LogP and why is it important?")
