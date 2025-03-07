@@ -6,21 +6,6 @@ def smiles_to_mol(smiles1: str):
     mol = Chem.MolFromSmiles(smiles1)
     return mol
 
-def compute_properties(smiles1: str):
-    mol = smiles_to_mol(smiles1)
-    if mol is None:
-        return ("Invalid compound 😿")
-
-    properties = {
-        "Molecular Weight": Descriptors.MolWt(mol),
-        "LogP": Descriptors.MolLogP(mol),
-        "TPSA": rdMolDescriptors.CalcTPSA(mol),
-        "Number of Rotatable Bonds": Descriptors.NumRotatableBonds(mol),
-        "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
-        "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
-    }
-    return properties
-
 def compute_mw(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
@@ -93,7 +78,6 @@ def molecular_formula(smiles1):
         return "Invalid compound 😿"
     return Chem.rdMolDescriptors.CalcMolFormula(mol)
 
-
 def compute_similarity(smiles1: str, smiles2: str):
     mol1 = smiles_to_mol(smiles1)
     mol2 = smiles_to_mol(smiles2)
@@ -104,8 +88,7 @@ def compute_similarity(smiles1: str, smiles2: str):
     fp1 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol1, radius=2, nBits=2048) #morgan fingerprints
     fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
 
-    similarity = DataStructs.FingerprintSimilarity(fp1, fp2)
-    return {"Tanimoto Similarity": similarity}
+    return DataStructs.FingerprintSimilarity(fp1, fp2)
 
 
 
@@ -117,8 +100,7 @@ def compute_similarity(smiles1: str, smiles2: str):
 
 
 
-
-#doesnt work :(
+#'Draw' doesnt work :(
 def render_molecule_image(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
@@ -127,6 +109,22 @@ def render_molecule_image(smiles: str):
     return img
 
 #removed function from the streamlit app, kept for reference purposes
+def compute_properties(smiles1: str):
+    mol = smiles_to_mol(smiles1)
+    if mol is None:
+        return ("Invalid compound 😿")
+
+    properties = {
+        "Molecular Weight": Descriptors.MolWt(mol),
+        "LogP": Descriptors.MolLogP(mol),
+        "TPSA": rdMolDescriptors.CalcTPSA(mol),
+        "Number of Rotatable Bonds": Descriptors.NumRotatableBonds(mol),
+        "H-Bond Donors": rdMolDescriptors.CalcNumHBD(mol),
+        "H-Bond Acceptors": rdMolDescriptors.CalcNumHBA(mol),
+    }
+    return properties
+
+
 def detect_functional_groups(smiles: str):
     mol = smiles_to_mol(smiles)
     if mol is None:
