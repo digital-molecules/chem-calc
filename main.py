@@ -77,6 +77,7 @@ if smiles1:
     else:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
 
+col1, col2 = st.columns(2)
 with col2:
     st.write("Made by AresToCat")
 
