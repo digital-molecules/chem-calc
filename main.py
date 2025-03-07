@@ -73,7 +73,7 @@ if smiles1:
         st.subheader("Quantitative Drug-Likeness")
         qed = compute_qed(smiles1)
         st.write("QED:", qed)
-        st.subheader("Tanimoto Similarity")
+        st.subheader("Molecular Similarity")
         smiles2 = st.text_input("**Enter another SMILES for similarity comparison:**")
         if smiles1 and smiles2:
             sim = compute_similarity(smiles1, smiles2)
