@@ -85,7 +85,7 @@ if smiles1:
     if not isinstance(lip_info, dict):
         st.error(lip_info if isinstance(lip_info, str) else "An unknown error occurred. 😿")
     elif lip_info.get("This compound passes Lipinski's Rule of 5 and Veber's Rule"):
-        st.success("This molecule follows Lipinski's and Veber's Rule! 😺")
+        st.success("This molecule follows both Lipinski's and Veber's Rules! 😺")
     else:
         st.warning("This molecule either does **not** follow Lipinski's or Verber's Rule. 😿")
 
