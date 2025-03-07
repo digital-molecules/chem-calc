@@ -74,9 +74,9 @@ if smiles1:
 
 if smiles1:
     lip_info = compute_lip(smiles1)
-    if isinstance(lip_info, str):  # Check if it's an error message
-        st.error(lip_info)
-    if lip_info.get("This compound passes Lipinski's Rule of 5 and Verber's Rule"):
+    if not isinstance(lip_info, dict):  # If it's not a dictionary, assume it's an error message
+        st.error(lip_info if isinstance(lip_info, str) else "An unknown error occurred. 😿")
+    elif lip_info.get("This compound passes Lipinski's Rule of 5 and Verber's Rule"):
         st.success("This molecule follows Lipinski's Rule of 5 and Verber's Rule! 😺")
     else:
         st.warning("This molecule does **NOT** follow EITHER Lipinski's Rule of 5 OR Verber's Rule. 😿")
