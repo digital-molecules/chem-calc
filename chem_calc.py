@@ -47,7 +47,7 @@ def compute_qed(smiles1: str):
         return ("Invalid compound 😿")
     return QED.qed(mol)
 
-def compute_lip(smiles1: str):
+def compute_rules(smiles1: str):
     mol = smiles_to_mol(smiles1)
     if mol is None:
         return ("Invalid compound 😿")
@@ -71,11 +71,6 @@ def compute_lip(smiles1: str):
 
     return {"This compound passes Lipinski's Rule of 5 and Veber's Rule": successful_parameters}
 
-def molecular_formula(smiles1):
-    mol = Chem.MolFromSmiles(smiles1)
-    if mol is None:
-        return "Invalid compound 😿"
-    return Chem.rdMolDescriptors.CalcMolFormula(mol)
 
 def compute_similarity(smiles1: str, smiles2: str):
     mol1 = smiles_to_mol(smiles1)
@@ -88,3 +83,11 @@ def compute_similarity(smiles1: str, smiles2: str):
     fp2 = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol2, radius=2, nBits=2048)
 
     return DataStructs.FingerprintSimilarity(fp1, fp2)
+
+
+#not implemented on the app
+def molecular_formula(smiles1):
+    mol = Chem.MolFromSmiles(smiles1)
+    if mol is None:
+        return "Invalid compound 😿"
+    return Chem.rdMolDescriptors.CalcMolFormula(mol)
