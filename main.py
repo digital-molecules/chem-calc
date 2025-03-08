@@ -89,4 +89,5 @@ if smiles1:
         st.success("This molecule follows both Lipinski's and Veber's Rules! 😺")
     else:
         st.warning("This molecule does not follow Lipinski's and Verber's Rules. 😿")
+
 st.markdown("---")
