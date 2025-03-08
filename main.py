@@ -25,7 +25,7 @@ with st.sidebar:
     st.markdown("---")    
     st.header("QED")
     st.subheader("🤔 What is QED and why is it important?")
-    st.write("💡 _Quantitative Drug Likeness (QED)_ is based on 'desirability functions', which are used for multi-criteria optimizations. QED  shows us a deterministic score depending on how closely a molecule aligns with the properties of known oral pharmaceuticals. It is based on the following parameters: molecular weight (MW), lipophilicity (logP), number of hydrogen bond donors (HBD), number of hydrogen bond acceptors (HBA), molecular polar surface area (PSA), number of rotatable bonds (ROTB), the number of aromatic rings (AROM) and number of structural alerts (ALERTS). [[9]](https://pmc.ncbi.nlm.nih.gov/articles/PMC3524573/)")
+    st.write("💡 _Quantitative Drug Likeness (QED)_ is based on 'desirability functions', which are used for multi-criteria optimizations. QED  shows us a deterministic score depending on how closely a molecule aligns with the properties of known oral pharmaceuticals. It is based on the following parameters: molecular weight (MW), lipophilicity (logP), number of hydrogen bond donors (HBD), number of hydrogen bond acceptors (HBA), molecular polar surface area (PSA), number of rotatable bonds (ROTB), number of aromatic rings (AROM) and number of structural alerts (ALERTS). [[9]](https://pmc.ncbi.nlm.nih.gov/articles/PMC3524573/)")
     st.subheader("🤔 How do we interpet QED values?")
     st.write("💡 QED gives us a score from 1 to 0; the closer to 1, the higher the 'drug-likeness'. [[10]](https://academic.oup.com/bib/article/25/4/bbae321/7709089)")
     st.markdown("---")    
