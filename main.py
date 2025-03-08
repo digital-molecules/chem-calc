@@ -1,5 +1,5 @@
 import streamlit as st
-from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, compute_hbd, compute_hba, compute_qed, compute_lip, molecular_formula, compute_similarity
+from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, compute_hbd, compute_hba, compute_qed, compute_rules, compute_similarity
 
 
 with st.sidebar:
@@ -81,10 +81,10 @@ if smiles1:
             
 
 if smiles1:
-    lip_info = compute_lip(smiles1)
-    if not isinstance(lip_info, dict):
-        st.error(lip_info if isinstance(lip_info, str) else "An unknown error occurred. 😿")
-    elif lip_info.get("This compound passes Lipinski's Rule of 5 and Veber's Rule"):
+    rules = compute_rules(smiles1)
+    if not isinstance(rules, dict):
+        st.error(rules if isinstance(rules, str) else "An unknown error occurred. 😿")
+    elif rules.get("This compound passes Lipinski's Rule of 5 and Veber's Rule"):
         st.success("This molecule follows both Lipinski's and Veber's Rules! 😺")
     else:
         st.warning("This molecule either does **not** follow Lipinski's or Verber's Rule. 😿")
