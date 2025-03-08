@@ -15,7 +15,7 @@ with st.sidebar:
     st.subheader("🤔 What is logP and why is it important?")
     st.write("💡 _Lipophilicity_ represents the compound's preference for lipid phases over aqueous ones. It plays a major role in a molecule's absorption, distribution within the body, metabolism and excretion (ADME properties), as well as its ability to penetrate biological membranes and barriers. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf) It is mathematically defined by the partition coefficient P, the measurement of the differential solubility of a compound in two immiscible solvents. *LogP* describes lipophilicity in neutral compounds only, so we should be careful to measure the logP only at a pH where the molecule is in its neutral form and not ionized. [[6]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/logp_vs_logd.pdf)")
     st.subheader("🤔 How do we interpet LogP values?")
-    st.write("💡 Higher logP means higher lipophilicity. A negative logP value indicates that the compound is hydrophilic. A logP of zero indicates the molecule is equally dispersed among the two phases. Based on Pfizer's rule, better known as Lipinski's Rule of 5, a molecule for oral administration should have a logP of less than 5. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf)")
+    st.write("💡 Higher logP means higher lipophilicity. A negative logP value indicates that the compound is hydrophilic. A logP of zero indicates the molecule is equally dispersed among the two phases. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf)")
 
     st.header("TPSA")
     st.subheader("🤔 What is TPSA and why is it important?")
@@ -39,7 +39,7 @@ with st.sidebar:
     
     st.header("Lipinski's Rule of 5")
     st.subheader("🤔 What is 'Lipinski's Rule of 5'?")
-    st.write("💡 _Lipinski's Rule of 5'_ says, in regards to a drug's oral bioavailability, that '**poor** absorption and permeation are more likely when there are more than 5 H-bond donors, the molecular weight is over 500Da, the logP is over 5 and there are more than 10 H-bond acceptors' and that 'compound classes that are substrates for biological transporters are exceptions to the rule.' [[14]](https://www.sciencedirect.com/science/article/abs/pii/S0169409X96004231) We should be careful when using it, as it is not intended to exclude molecules from being potential orally administered drug candidates, but rather to serve as a guideline.")
+    st.write("💡 '_Lipinski's Rule of 5'_ says, in regards to a drug's oral bioavailability, that '**poor** absorption and permeation are more likely when there are more than 5 H-bond donors, the molecular weight is over 500Da, the logP is over 5 and there are more than 10 H-bond acceptors' and that 'compound classes that are substrates for biological transporters are exceptions to the rule.' [[14]](https://www.sciencedirect.com/science/article/abs/pii/S0169409X96004231) We should be careful when using it, as it is not intended to exclude molecules from being potential orally administered drug candidates, but rather to serve as a guideline.")
 
     st.header("Veber's rule")
     st.subheader("🤔 What is 'Veber's Rule'?")
@@ -87,7 +87,7 @@ if smiles1:
     elif rules.get("This compound passes Lipinski's Rule of 5 and Veber's Rule"):
         st.success("This molecule follows both Lipinski's and Veber's Rules! 😺")
     else:
-        st.warning("This molecule either does **not** follow Lipinski's or Verber's Rule. 😿")
+        st.warning("This molecule does not follow Lipinski's and Verber's Rules. 😿")
 
 st.caption("<h1 style='text-align: center; font-size: 20px; font-weight: 100; font-style: italic;'>Make sure to refer to the sidebar for more information</h1>", unsafe_allow_html=True)
 st.markdown("---")
