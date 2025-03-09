@@ -31,7 +31,7 @@ with st.sidebar:
     st.markdown("---")    
     st.header("Tanimoto Index")
     st.subheader("🤔 What is Tanimoto Index and why is it useful?")
-    st.write("💡 A molecular fingerprint is structural descriptor and a powerful and compact representation of a molecule as a binary vector, describing the presence or absence of a specific chemical property or structure within the compound [[11]](https://onlinelibrary.wiley.com/doi/10.1002/minf.201900130). The *Tanimoto Index*, or Jaccard coefficient, divides the shared features between two molecules to the total number of unique features present in either molecule. [[12]](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479812/)")
+    st.write("💡 A molecular fingerprint is structural descriptor and a powerful and compact representation of a molecule as a binary vector, describing the presence or absence of a specific chemical property or structure within the compound. [[11]](https://onlinelibrary.wiley.com/doi/10.1002/minf.201900130) The *Tanimoto Index*, or Jaccard coefficient, divides the shared features between two molecules to the total number of unique features present in either molecule. [[12]](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479812/)")
     st.subheader("🤔 What are Morgan Fingerprints?")
     st.write("💡 _Morgan Fingerprints_ are based on the Morgan algorithm and were created to solve the molecular isomorphism problem — to identify when two molecules, with different atom numberings, are the same. Individual numerical identifiers are assigned to each of the atoms in a molecule, providing more accurate comparisons compared to Daylight fingerprints. [[13]](https://pubs.acs.org/doi/abs/10.1021/ci100050t)")
     st.subheader("🤔 How do we interpret the results of the comparison?")
