@@ -44,6 +44,13 @@ with st.sidebar:
     st.header("Veber's rule")
     st.subheader("🤔 What is 'Veber's Rule'?")
     st.write("💡 _'Veber's Rule'_ proposes that a compound is more likely to have sufficient oral bioavailability when it has 10 or fewer rotatable bonds and PSA of less than or equal to 140Å². [[15]](https://pubs.acs.org/doi/10.1021/jm020017n) It's often used together with Lipinski's Rule to develop molecules with more 'drug-like' traits.")
+    st.markdown("---")
+    st.header("Interesting examples to try")
+    st.subheader("💊Ibuprofen:")
+    st.write("CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
+    st.subheader("💊Paracetamol:")
+    st.write("CC(=O)NC1=CC=C(C=C1)O")
+    
     st.caption("Have fun with cheminformatics!")
 
 st.title("Metricular: A pocket molecular calculator")
