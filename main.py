@@ -47,7 +47,6 @@ with st.sidebar:
     st.caption("Have fun with cheminformatics!")
 
 st.title("Metricular: A pocket molecular calculator")
-st.write("Thanks to all cheminformaticians for their public resources.")
 st.caption("Made by 'ares to cat'")
 
 smiles1 = st.text_input("**Please enter a valid SMILES:**")
