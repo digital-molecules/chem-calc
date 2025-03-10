@@ -1,0 +1,1 @@
+💡 QED gives us a score from 1 to 0; the closer to 1, the higher the 'drug-likeness'. [[10]](https://academic.oup.com/bib/article/25/4/bbae321/7709089)

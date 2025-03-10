@@ -1,0 +1,1 @@
+💡 In general, a drug presumed for intestinal absorption should have a TPSA of less than 140Å² and less than 90Å² if it's intended for blood-brain barrier (BBB) penetration. [[8]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5146717)

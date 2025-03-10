@@ -1,0 +1,1 @@
+💡 Higher logP means higher lipophilicity. A negative logP value indicates that the compound is hydrophilic. A logP of zero indicates the molecule is equally dispersed among the two phases. [[5]](https://www.acdlabs.com/wp-content/uploads/download/app/physchem/making_sense.pdf)

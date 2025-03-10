@@ -1,0 +1,1 @@
+💡 The Tanimoto Index gives a score from 0 to 1, the higher the index the more similar the molecules are and thus more likely to have similar properties.
