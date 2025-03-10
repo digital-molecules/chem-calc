@@ -61,7 +61,7 @@ smiles1 = st.text_input("**Please enter a valid SMILES:**")
 if smiles1:
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Molecular Properties")
+        st.subheader("Molecular Descriptors")
         mw = compute_mw(smiles1)
         st.write("Molecular Weight:", mw)
         logp = compute_logp(smiles1)
