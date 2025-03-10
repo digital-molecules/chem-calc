@@ -69,7 +69,7 @@ with st.sidebar:
     st.markdown("---")
     st.header("Veber's rule")
     st.subheader("🤔 What is 'Veber's Rule'?")
-    with open("info/veber.txt", "r") as file:
+    with open("info/14veber.txt", "r") as file:
         veber = file.read()
     st.markdown(veber, unsafe_allow_html=True)
     st.markdown("---")
