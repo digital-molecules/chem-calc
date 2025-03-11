@@ -4,7 +4,7 @@ from chem_calc import compute_mw, compute_logp, compute_tpsa, compute_rotbond, c
 
 with st.sidebar:
     st.title("QSAR")
-    st.subheader("🤔 What is QSAR and why is it relevant to cheminformatics?")
+    st.subheader("🤔 What is QSAR and why is it relevant to chemoinformatics?")
     with open("info/1qsar.txt", "r") as file:
         qsar = file.read()
     st.markdown(qsar, unsafe_allow_html=True)
@@ -79,7 +79,7 @@ with st.sidebar:
     st.subheader("💊Paracetamol:")
     st.write("CC(=O)NC1=CC=C(C=C1)O")
     
-    st.caption("Have fun with cheminformatics!")
+    st.caption("Have fun with chemoinformatics!")
 
 st.title("Metricular: A pocket molecular calculator")
 st.caption("Made by 'ares to cat'")
