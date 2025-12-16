@@ -78,8 +78,7 @@ with st.sidebar:
     st.write("CC(C)CC1=CC=C(C=C1)C(C)C(=O)O")
     st.subheader("💊Paracetamol:")
     st.write("CC(=O)NC1=CC=C(C=C1)O")
-    
-    st.caption("Have fun with chemoinformatics!")
+
 
 st.title("Metricular: A pocket molecular calculator")
 st.caption("Made by 'ares to cat'")
@@ -124,3 +123,4 @@ if smiles1:
         st.warning("This molecule does not follow Lipinski's and Verber's Rules. 😿")
 
 st.markdown("---")
+
